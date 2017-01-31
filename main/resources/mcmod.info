@@ -1,0 +1,16 @@
+[
+{
+  "modid": "ancient",
+  "name": "Ancient",
+  "description": "Ancient Mod",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["ExampleDude"],
+  "credits": "Raffaele Francesco Mancino",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
