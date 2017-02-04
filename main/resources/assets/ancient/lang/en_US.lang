@@ -1,1 +1,12 @@
 tile.big_furnace.name=Big Furnace
+tile.marble.name=Marble
+tile.marble_brick.name=Marble Brick
+tile.marble_doric.name=Doric Pillar
+tile.marble_ionic.name=Ionic Pillar
+tile.marble_corinthian.name=Corinthian Pillar
+tile.marble_stairs.name=Marble Stairs
+tile.marble_slab.name=Marble Slab
+tile.marble_chiseled.name=Marble Chiseled
+tile.table_sculptor.name=Table Sculpor
+
+itemGroup.tab_ancient=Ancient Tab

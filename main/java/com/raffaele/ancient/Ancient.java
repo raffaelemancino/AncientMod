@@ -18,12 +18,16 @@
 package com.raffaele.ancient;
 
 import com.raffaele.ancient.blocks.ModBlocks;
+import com.raffaele.ancient.items.ModItems;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkRegistry;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 
 @Mod(modid = Info.ID, name = Info.NAME, version = Info.VERSION, acceptedMinecraftVersions = Info.MINECRAFT)
 public class Ancient
@@ -32,17 +36,30 @@ public class Ancient
     public static Ancient instance = new Ancient();
     
     public static final int ID_BIGFURNACE = 0;
+    public static final int ID_SCULPTOR = 1;
+    
+    public static final CreativeTabs tabAncient = new CreativeTabs("tab_ancient")
+    {
+        @Override
+        public Item getTabIconItem()
+        {
+            return Items.golden_helmet;
+        }
+            
+    };
     
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
         ModBlocks.preInit();
+        ModItems.preInit();
     }
     
     @EventHandler
     public void Init(FMLInitializationEvent event)
     {
         ModBlocks.Init();
+        ModItems.preInit();
         NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
     }
     
@@ -50,5 +67,6 @@ public class Ancient
     public void postInit(FMLPostInitializationEvent event)
     {
         ModBlocks.postInit();
+        ModItems.postInit();
     }
 }
