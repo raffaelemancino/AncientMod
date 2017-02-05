@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.raffaele.ancient.blocks.sculptor;
+package com.raffaele.ancient.blocks.table;
 
 import com.raffaele.ancient.blocks.ModBlocks;
 import java.util.ArrayList;
@@ -38,7 +38,7 @@ public class CraftingManagerSculptor
 {
     public static final CraftingManagerSculptor instance = new CraftingManagerSculptor();
     private List recipes = new ArrayList();
-
+    
     public CraftingManagerSculptor()
     {
         this.addShapelessRecipe(new ItemStack(ModBlocks.marble), new ItemStack(Blocks.stone)); //marble
@@ -78,21 +78,20 @@ public class CraftingManagerSculptor
         
     }
     
-
     public static CraftingManagerSculptor getInstance() {
         return instance;
     }
     
-    public ItemStack findMatchingRecipe(InventoryCrafting inventoryCrafting, World world)
+    public ItemStack findMatchingRecipe(InventoryCrafting p_82787_1_, World p_82787_2_)
     {
         int i = 0;
         ItemStack itemstack = null;
         ItemStack itemstack1 = null;
         int j;
 
-        for (j = 0; j < inventoryCrafting.getSizeInventory(); ++j)
+        for (j = 0; j < p_82787_1_.getSizeInventory(); ++j)
         {
-            ItemStack itemstack2 = inventoryCrafting.getStackInSlot(j);
+            ItemStack itemstack2 = p_82787_1_.getStackInSlot(j);
 
             if (itemstack2 != null)
             {
@@ -131,9 +130,9 @@ public class CraftingManagerSculptor
             {
                 IRecipe irecipe = (IRecipe)this.recipes.get(j);
 
-                if (irecipe.matches(inventoryCrafting, world))
+                if (irecipe.matches(p_82787_1_, p_82787_2_))
                 {
-                    return irecipe.getCraftingResult(inventoryCrafting);
+                    return irecipe.getCraftingResult(p_82787_1_);
                 }
             }
 

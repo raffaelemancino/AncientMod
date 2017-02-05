@@ -8,5 +8,6 @@ tile.marble_stairs.name=Marble Stairs
 tile.marble_slab.name=Marble Slab
 tile.marble_chiseled.name=Marble Chiseled
 tile.table_sculptor.name=Table Sculpor
+tile.table_greeks.name=Table Greeks
 
 itemGroup.tab_ancient=Ancient Tab

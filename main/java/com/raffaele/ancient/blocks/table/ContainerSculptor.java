@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.raffaele.ancient.blocks.sculptor;
+package com.raffaele.ancient.blocks.table;
 
 import com.raffaele.ancient.blocks.ModBlocks;
 import net.minecraft.entity.player.EntityPlayer;

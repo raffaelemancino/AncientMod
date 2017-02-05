@@ -44,11 +44,12 @@ public class ModBlocks
     public static Block marble_corinthian;
     public static Block marble_chiseled;
     public static Block table_sculptor;
+    public static Block table_greeks;
     
     public static void preInit()
     {        
-        bigFurnace = new BigFurnaceBlock(false).setBlockName("big_furnace").setBlockTextureName(Info.ID + ":bigfurnace").setCreativeTab(Ancient.tabAncient);
-        bigFurnace_a = new BigFurnaceBlock(true).setBlockName("big_furnace_a").setBlockTextureName(Info.ID + ":bigfurnace").setLightLevel(1.5F);
+        bigFurnace = new BigFurnaceBlock(false).setBlockName("big_furnace").setBlockTextureName(Info.ID + ":bigfurnace").setCreativeTab(Ancient.tabAncient).setHardness(1.5F).setResistance(10.0F);
+        bigFurnace_a = new BigFurnaceBlock(true).setBlockName("big_furnace_a").setBlockTextureName(Info.ID + ":bigfurnace").setLightLevel(4F).setHardness(1.5F).setResistance(10.0F);
         
         GameRegistry.registerBlock(bigFurnace, bigFurnace.getUnlocalizedName());
         GameRegistry.registerBlock(bigFurnace_a, bigFurnace_a.getUnlocalizedName());
@@ -72,8 +73,10 @@ public class ModBlocks
         GameRegistry.registerBlock(marble_chiseled, marble_chiseled.getUnlocalizedName());
         
         table_sculptor = new CraftingTable("table_sculptor", Ancient.ID_SCULPTOR).setBlockTextureName(Info.ID + ":table_sculptor").setCreativeTab(Ancient.tabAncient);
+        table_greeks = new CraftingTable("table_greek", Ancient.ID_GREEK).setBlockTextureName(Info.ID + ":table_greeks").setCreativeTab(Ancient.tabAncient);
         
         GameRegistry.registerBlock(table_sculptor, table_sculptor.getUnlocalizedName());
+        GameRegistry.registerBlock(table_greeks, table_greeks.getUnlocalizedName());
         
         crafting();
     }

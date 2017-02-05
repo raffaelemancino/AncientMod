@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.raffaele.ancient.blocks.sculptor;
+package com.raffaele.ancient.blocks.table;
 
 import com.raffaele.ancient.Info;
 import net.minecraft.client.gui.inventory.GuiContainer;
@@ -47,7 +47,7 @@ public class GuiSculptor extends GuiContainer{
 
     @Override
     protected void drawGuiContainerForegroundLayer(int p_146979_1_, int p_146979_2_) {
-        this.fontRendererObj.drawString(StatCollector.translateToLocal("Sculptor"), 28, 6, 4210752);
+        this.fontRendererObj.drawString(StatCollector.translateToLocal("Sculptor Workbanch"), 28, 6, 4210752);
         this.fontRendererObj.drawString(StatCollector.translateToLocal("Inventory"), 8, this.ySize - 96 + 2, 4210752);
     }
     

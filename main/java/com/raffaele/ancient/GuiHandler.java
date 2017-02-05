@@ -19,8 +19,10 @@ package com.raffaele.ancient;
 import com.raffaele.ancient.blocks.bigfurnace.ContainerBigFurnace;
 import com.raffaele.ancient.blocks.bigfurnace.GuiBigFurnace;
 import com.raffaele.ancient.blocks.bigfurnace.TileEntityBigFurnace;
-import com.raffaele.ancient.blocks.sculptor.ContainerSculptor;
-import com.raffaele.ancient.blocks.sculptor.GuiSculptor;
+import com.raffaele.ancient.blocks.table.ContainerGreek;
+import com.raffaele.ancient.blocks.table.ContainerSculptor;
+import com.raffaele.ancient.blocks.table.GuiGreek;
+import com.raffaele.ancient.blocks.table.GuiSculptor;
 import cpw.mods.fml.common.network.IGuiHandler;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
@@ -42,6 +44,10 @@ public class GuiHandler implements IGuiHandler{
         {
             return new ContainerSculptor(player.inventory, world, x, y, z);
         }
+        if(ID == Ancient.ID_GREEK)
+        {
+            return new ContainerGreek(player.inventory, world, x, y, z);
+        }
         return null;
     }
 
@@ -55,6 +61,10 @@ public class GuiHandler implements IGuiHandler{
         if(ID == Ancient.ID_SCULPTOR)
         {
             return new GuiSculptor(player.inventory, world, x, y, z);
+        }
+        if(ID == Ancient.ID_GREEK)
+        {
+            return new GuiGreek(player.inventory, world, x, y, z);
         }
         return null;
     }
