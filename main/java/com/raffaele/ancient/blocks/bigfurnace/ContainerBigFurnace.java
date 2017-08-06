@@ -151,44 +151,44 @@ public class ContainerBigFurnace extends Container
             ItemStack itemstack1 = slot.getStack();
             itemstack = itemstack1.copy();
 
-            if (i == 2)
+            if (i == 5 || i == 6 || i == 7 || i == 8)
             {
-                if (!this.mergeItemStack(itemstack1, 3, 39, true))
+                if (!this.mergeItemStack(itemstack1, 9, 45, true))
                 {
                     return null;
                 }
 
                 slot.onSlotChange(itemstack1, itemstack);
             }
-            else if (i != 1 && i != 0)
+            else if (i != 0 && i != 1 && i != 2 && i != 3 && i != 4)
             {
                 if (FurnaceRecipes.smelting().getSmeltingResult(itemstack1) != null)
                 {
-                    if (!this.mergeItemStack(itemstack1, 0, 1, false))
+                    if (!this.mergeItemStack(itemstack1, 1, 5, false))
                     {
                         return null;
                     }
                 }
                 else if (TileEntityBigFurnace.isItemFuel(itemstack1))
                 {
-                    if (!this.mergeItemStack(itemstack1, 1, 2, false))
+                    if (!this.mergeItemStack(itemstack1, 0, 1, false))
                     {
                         return null;
                     }
                 }
-                else if (i >= 3 && i < 30)
+                else if (i >= 9 && i < 36)
                 {
-                    if (!this.mergeItemStack(itemstack1, 30, 39, false))
+                    if (!this.mergeItemStack(itemstack1, 36, 45, false))
                     {
                         return null;
                     }
                 }
-                else if (i >= 30 && i < 39 && !this.mergeItemStack(itemstack1, 3, 30, false))
+                else if (i >= 36 && i < 45 && !this.mergeItemStack(itemstack1, 9, 36, false))
                 {
                     return null;
                 }
             }
-            else if (!this.mergeItemStack(itemstack1, 3, 39, false))
+            else if (!this.mergeItemStack(itemstack1, 9, 45, false))
             {
                 return null;
             }

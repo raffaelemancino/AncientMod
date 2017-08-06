@@ -19,6 +19,9 @@ package com.raffaele.ancient;
 import com.raffaele.ancient.blocks.bigfurnace.ContainerBigFurnace;
 import com.raffaele.ancient.blocks.bigfurnace.GuiBigFurnace;
 import com.raffaele.ancient.blocks.bigfurnace.TileEntityBigFurnace;
+import com.raffaele.ancient.blocks.miner.ContainerMiner;
+import com.raffaele.ancient.blocks.miner.GuiMiner;
+import com.raffaele.ancient.blocks.miner.TileEntityMiner;
 import com.raffaele.ancient.blocks.table.ContainerGreek;
 import com.raffaele.ancient.blocks.table.ContainerSculptor;
 import com.raffaele.ancient.blocks.table.GuiGreek;
@@ -40,6 +43,10 @@ public class GuiHandler implements IGuiHandler{
             TileEntityBigFurnace entity = (TileEntityBigFurnace)world.getTileEntity(x, y, z);
             return new ContainerBigFurnace(player.inventory, entity);
         }
+        if (ID == Ancient.ID_MINER) {
+            TileEntityMiner entity = (TileEntityMiner)world.getTileEntity(x, y, z);
+            return new ContainerMiner(player.inventory, entity);
+        }
         if(ID == Ancient.ID_SCULPTOR)
         {
             return new ContainerSculptor(player.inventory, world, x, y, z);
@@ -57,6 +64,10 @@ public class GuiHandler implements IGuiHandler{
         if (ID == Ancient.ID_BIGFURNACE) {
             TileEntityBigFurnace entity = (TileEntityBigFurnace)world.getTileEntity(x, y, z);
             return new GuiBigFurnace(player.inventory, entity);
+        }
+        if (ID == Ancient.ID_MINER) {
+            TileEntityMiner entity = (TileEntityMiner)world.getTileEntity(x, y, z);
+            return new GuiMiner(player.inventory, entity);
         }
         if(ID == Ancient.ID_SCULPTOR)
         {

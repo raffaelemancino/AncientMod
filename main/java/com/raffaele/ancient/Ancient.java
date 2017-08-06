@@ -38,6 +38,7 @@ public class Ancient
     public static final int ID_BIGFURNACE = 0;
     public static final int ID_SCULPTOR = 1;
     public static final int ID_GREEK = 2;
+    public static final int ID_MINER = 3;
     
     public static final CreativeTabs tabAncient = new CreativeTabs("tab_ancient")
     {
@@ -60,7 +61,7 @@ public class Ancient
     public void Init(FMLInitializationEvent event)
     {
         ModBlocks.Init();
-        ModItems.preInit();
+        ModItems.Init();
         NetworkRegistry.INSTANCE.registerGuiHandler(instance, new GuiHandler());
     }
     
