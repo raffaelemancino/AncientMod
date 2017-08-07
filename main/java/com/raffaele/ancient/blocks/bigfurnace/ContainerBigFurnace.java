@@ -27,6 +27,8 @@ import net.minecraft.inventory.SlotFurnace;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 
+//import net.minecraft.inventory.ContainerFurnace;
+
 /**
  *
  * @author Raffaele Francesco Mancino
